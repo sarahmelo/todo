@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasksCreated, .completedTasks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.text {
+    color: var(--blue);
+    font-size: var(--sm);
+    font-weight: bold;
+}
+
+.counter {
+    background-color: var(--gray-500);
+    padding: 2px 8px;
+    border-radius: 20px;
+    color: var(--gray-100);
+    font-size: var(--sm);
+    font-weight: bold;
+}

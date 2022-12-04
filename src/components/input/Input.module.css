@@ -1,0 +1,15 @@
+.input {
+    max-height: 54px;
+    width: 100%;
+    max-width: 736px;
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    background-color: var(--gray-500);
+    color: var(--gray-300);
+    font-size: 16px;
+    padding: 16px;
+}
+
+.input:focus {
+    outline: 2px solid var(--purple-dark);
+}

@@ -1,0 +1,28 @@
+.button {
+    padding: 16px;
+    color: var(--gray-100);
+    background-color: var(--purple-dark);
+    font-size: var(--sm);
+    font-weight: bold;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    transition: background-color 500ms;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--purple);
+}
+
+.button:focus {
+    outline: transparent;
+}
+
+.icon {
+    font-size: var(--md)
+}
