@@ -1,7 +1,13 @@
 .headerPage {
     margin: 0 auto;
+    margin-bottom: 53px;
     display: flex;
     width: fit-content;
+    align-items: center;
+}
+
+.h1 {
+    display: contents;
 }
 
 .firstWord {

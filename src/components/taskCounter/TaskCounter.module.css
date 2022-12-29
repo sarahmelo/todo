@@ -17,6 +17,7 @@
     color: var(--blue);
     font-size: var(--sm);
     font-weight: bold;
+    font-family: var(--inter);
 }
 
 .counter {
@@ -26,4 +27,5 @@
     color: var(--gray-100);
     font-size: var(--sm);
     font-weight: bold;
+    font-family: var(--inter);
 }

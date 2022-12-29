@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    height: 56px;
+}
+
+.title, .subtitle {
+    color: var(--gray-300);
+}
+
+.title {
+    font-weight: bold;
+}

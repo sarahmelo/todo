@@ -1,4 +1,50 @@
-.content {
+.container {
     display: flex;
+    gap: 1rem;
+}
+
+.input {
+    max-height: 54px;
+    width: 100%;
+    max-width: 736px;
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    background-color: var(--gray-500);
+    color: var(--gray-300);
+    font-size: 16px;
+    padding: 16px;
+}
+
+.input:focus {
+    outline: 2px solid var(--purple-dark);
+}
+
+.button {
+    padding: 16px;
+    color: var(--gray-100);
+    background-color: var(--blue-dark);
+    font-size: var(--sm);
+    font-weight: bold;
+    height: 52px;
+    display: flex;
+    align-items: center;
     gap: 8px;
+    text-transform: uppercase;
+    transition: background-color 500ms;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: var(--blue);
+}
+
+.button:focus {
+    outline: transparent;
+}
+
+.icon {
+    font-size: var(--md)
 }
