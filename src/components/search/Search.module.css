@@ -1,40 +1,39 @@
 .container {
     display: flex;
     gap: 1rem;
+    margin-top: -65px;
 }
 
 .input {
-    max-height: 54px;
-    width: 100%;
     max-width: 736px;
+    width: 100%;
     border: 1px solid var(--gray-700);
     border-radius: 8px;
     background-color: var(--gray-500);
     color: var(--gray-300);
-    font-size: 16px;
+    font-size: var(--md);
     padding: 16px;
 }
 
 .input:focus {
-    outline: 2px solid var(--purple-dark);
+    outline: 1px solid var(--purple-dark);
 }
 
 .button {
-    padding: 16px;
     color: var(--gray-100);
     background-color: var(--blue-dark);
+    font-family: var(--inter);
     font-size: var(--sm);
     font-weight: bold;
-    height: 52px;
     display: flex;
     align-items: center;
     gap: 8px;
-    text-transform: uppercase;
-    transition: background-color 500ms;
-    outline: none;
     border: 0;
-    cursor: pointer;
     border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 500ms;
 }
 
 .button:hover {

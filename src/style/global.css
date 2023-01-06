@@ -1,3 +1,9 @@
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+
 :root {
     /* background colors */
     --gray-100: #F2F2F2;
@@ -26,6 +32,6 @@
 }
 
 body {
-    background-color: var(--gray-700);
-    height: 100vh;
+    margin: 0;
+    background-color: var(--gray-600);
 }

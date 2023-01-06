@@ -21,6 +21,14 @@ export function Search({onNewTask}: any) {
         setNewTaskTitle('');
     }
 
+    function addNewTaskWithEnterKeyboard(event: React.KeyboardEvent<HTMLInputElement>): void {
+        if (event.key !== 'Enter') {
+            return;
+        }
+
+        addNewTask(newTextTitle);
+    }
+
     return (
         <div className={styles.container}>
             <input 
@@ -30,6 +38,7 @@ export function Search({onNewTask}: any) {
                 className={styles.input}    
                 onChange={(e) => setNewTaskTitle(e.target.value)}
                 value={newTextTitle}
+                onKeyDown={(e) => addNewTaskWithEnterKeyboard(e)}
             />
             
 

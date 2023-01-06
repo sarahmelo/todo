@@ -1,3 +1,45 @@
 .taskName {
     color: var(--gray-100);
 }
+
+.taskList {
+    display: grid;
+    gap: 16px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-300);;
+    border-radius: 8px;
+    font-size: var(--sm);
+    font-family: var(--inter);
+    white-space: normal;
+}
+
+p {
+    margin: 0;
+}
+
+.leftContent {
+    display: flex;
+    align-items: center;
+}
+
+.trash {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: var(--gray-300);
+    font-size: var(--md);
+    transition: color 300ms;
+    padding: 6px;
+}
+
+.trash:hover {
+    color: var(--danger);
+    background-color: var(--gray-400);
+}

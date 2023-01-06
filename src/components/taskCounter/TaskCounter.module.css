@@ -1,10 +1,8 @@
-.container {
-    width: 100%;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 64px;
 }
 
 .tasksCreated, .completedTasks {
@@ -13,19 +11,35 @@
     gap: 8px;
 }
 
-.text {
+.tasksCreated {
     color: var(--blue);
+}
+
+.completedTasks {
+    color: var(--purple);
+}
+
+.text {
     font-size: var(--sm);
     font-weight: bold;
     font-family: var(--inter);
 }
 
-.counter {
-    background-color: var(--gray-500);
-    padding: 2px 8px;
+.counterDefault {
+    background-color: var(--gray-300);
+    padding: 3px 8px;
     border-radius: 20px;
     color: var(--gray-100);
-    font-size: var(--sm);
+    font-size: var(--xsm);
+    font-weight: bold;
+    font-family: var(--inter);
+}
+.counter {
+    background-color: var(--gray-500);
+    padding: 3px 8px;
+    border-radius: 20px;
+    color: var(--gray-100);
+    font-size: var(--xsm);
     font-weight: bold;
     font-family: var(--inter);
 }
