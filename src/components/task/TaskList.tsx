@@ -9,9 +9,6 @@ export interface TaskComponent {
 }
 
 export function TaskList({ tasks, setTaskList }: TaskComponent) {
-    const [inputAttributeChecked, setInputAttributeChecked] = useState<boolean>()
-    const [completeStats, setCompleteStatus] = useState<boolean>();
-
     function removeTask(id: number): void {
         const newStateTaskList = tasks.filter(task => task.id !== id)
 
@@ -19,50 +16,26 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
     }
 
     function setInputCheckedState(event: any, task: ITask): void {
-        //console.log(tasks.filter(t => t.name !==  task.name))
+        const taskPosition = tasks.indexOf(task);
+        const tasksCopy = [...tasks];
 
-        let reAtribuitionTasks = tasks.filter(t => t.name !==  task.name);
-
-        const getTaskPosition = tasks.indexOf(task)
-
-        let getTask: ITask = tasks[getTaskPosition]
-
-
-        if (getTask.complete === true) {
-            getTask.complete = false;
-            setTaskList([...reAtribuitionTasks, getTask])
-            console.log('===> task:',getTask)
-            console.log('tasks:', tasks)
-
-            return;
-        }
-
-        getTask.complete = true;
-        setTaskList([...reAtribuitionTasks, getTask])
-
-
-
-        console.log('===> task:',getTask)
-        console.log('tasks:', tasks)
-
-        // setTaskList()
-        
-        //setInputAttributeChecked(event.target.checked)
+        tasksCopy[taskPosition].complete = !tasksCopy[taskPosition].complete;
+        setTaskList([...tasksCopy]);
     }
 
-    function setInputClassName(): string {
-        if (!inputAttributeChecked) {
+    function setInputClassName(taskStatus: boolean): string {
+        if (!taskStatus) {
             return styles.defaultInput
         }
 
         return styles.checkedInput
     }
 
-    let taskIsComplete = (): boolean => inputAttributeChecked === true;
+    let taskIsComplete = (taskStatus: boolean): boolean => taskStatus === true;
     let checkedIcon: ReactElement<HTMLImageElement> = <img src="src/assets/checked.svg" alt="" />
 
-    function setTextClassName(): string {
-        if (inputAttributeChecked) {
+    function setTextClassName(taskStatus: boolean): string {
+        if (taskStatus) {
             return styles.completeTaskName
         }
 
@@ -74,7 +47,6 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
             {
                 tasks.map((task) => {
                     return (
-                        <>
                             <label 
                                 htmlFor={task.name} 
                                 key={task.name}
@@ -83,11 +55,10 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
                                 <div className={styles.leftContent}>
                                     <label 
                                         htmlFor={task.name}
-                                        className={setInputClassName()}    
+                                        className={setInputClassName(task.complete)}    
                                     >
-                                        
                                         {
-                                            taskIsComplete()
+                                            taskIsComplete(task.complete)
                                             ? checkedIcon
                                             : ''
                                         }
@@ -98,7 +69,7 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
                                         checked={task.complete}
                                         onChange={(event) => setInputCheckedState(event, task)}
                                     />
-                                    <p className={setTextClassName()}>{task.name}</p>
+                                    <p className={setTextClassName(task.complete)}>{task.name}</p>
                                 </div>
                                 <button 
                                     className={styles.trash}
@@ -107,7 +78,6 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
                                     <FiTrash2 display={'block'} />
                                 </button>
                             </label>
-                        </>
                     )
                 })
             }
