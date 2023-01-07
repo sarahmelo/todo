@@ -42,6 +42,14 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
         return styles.taskName
     }
 
+    function setContainerClassName(taskStatus: boolean): string {
+        if (taskStatus) {
+            return styles.checkedContainer;
+        }
+
+        return styles.defaultContainer;
+    }
+
     return (
         <div className={styles.taskList}>
             {
@@ -50,7 +58,7 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
                             <label 
                                 htmlFor={task.name} 
                                 key={task.name}
-                                className={styles.box}
+                                className={setContainerClassName(task.complete)}
                             >
                                 <div className={styles.leftContent}>
                                     <label 
