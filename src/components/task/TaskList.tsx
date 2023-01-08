@@ -72,6 +72,7 @@ export function TaskList({ tasks, setTaskList }: TaskComponent) {
                                         }
                                     </label>
                                     <input 
+                                        className={styles.input}
                                         type="checkbox" 
                                         id={task.name} 
                                         checked={task.complete}

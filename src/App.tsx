@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { EmptyList } from './components/emtyList/EmptyList'
+import { Header } from './components/header/Header'
 import { Search } from './components/search/Search'
 import { TaskList } from './components/task/TaskList'
 import { TaskCounter } from './components/taskCounter/TaskCounter'
@@ -24,7 +25,9 @@ function App() {
 
   return (
     <>
-      <div className='darkBlock'></div>
+      <div className='darkBlock'>
+        <Header/>
+      </div>
       <div className='main'>
         <Search onNewTask={handleNewTask}/>
         <TaskCounter taskCounter={taskList} />

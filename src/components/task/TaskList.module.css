@@ -1,10 +1,14 @@
 .taskName {
     color: var(--gray-100);
+    height: min-content;
+    margin: auto 0;
 }
 
 .completeTaskName {
     text-decoration: line-through;
     color: var(--gray-300);
+    margin: auto 0;
+    height: min-content;
 }
 
 .taskList {
@@ -15,6 +19,7 @@
 .defaultContainer {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     padding: 16px;
     background-color: var(--gray-500);
     border: 1px solid var(--gray-300);
@@ -31,6 +36,7 @@
 .checkedContainer {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     padding: 16px;
     background-color: var(--gray-500);
     border: 1px solid var(--gray-500);
@@ -45,12 +51,13 @@
 }
 
 p {
-    margin: 0;
+    margin: 0 12px;
 }
 
 .leftContent {
     display: flex;
-    align-items: center;
+    gap: 12px;
+    margin-right: 12px;
 }
 
 .trash {
@@ -63,6 +70,7 @@ p {
     transition: color 300ms;
     padding: 6px;
     cursor: pointer;
+    height: fit-content;
 }
 
 .trash:hover {
@@ -70,17 +78,20 @@ p {
     background-color: var(--gray-400);
 }
 
-input {
+.input {
     appearance: none;
+    margin: 0;
+    display: none;
 }
 
 .defaultInput {
     height: 15px;
-    width: 15px;
+    min-width: 15px;
     background-color: transparent;
     border: 2px solid var(--blue);
     border-radius: 25px;
     cursor: pointer;
+    margin-top: 6px;
 }
 
 .defaultInput:hover {
@@ -102,11 +113,12 @@ input {
     align-items: center;
     justify-content: center;
     height: 15px;
-    width: 15px;
+    min-width: 15px;
     background-color: var(--purple-dark);
     border: 2px solid var(--purple-dark);;
     border-radius: 25px;
     cursor: pointer;
+    margin-top: 6px;
 }
 
 .checkedInput:hover {

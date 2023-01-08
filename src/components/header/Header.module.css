@@ -4,16 +4,23 @@
     display: flex;
     width: fit-content;
     align-items: center;
+    gap: 12px;
 }
 
-.h1 {
-    display: contents;
+.title {
+    display: flex;
 }
 
-.firstWord {
-   color: var(--blue) 
+.to {
+    font-family: var(--inter);
+    font-weight: 900;
+    font-size: 40px;;
+    color: var(--blue) 
 }
 
-.twoWord {
-    color: var(--purple-dark)
+.do {
+    font-family: var(--inter);
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--purple-dark);
 }
