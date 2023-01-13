@@ -30,7 +30,7 @@ function App() {
       </div>
       <div className='main'>
         <Search onNewTask={handleNewTask}/>
-        <TaskCounter taskCounter={taskList} />
+        <TaskCounter taskList={taskList} />
         {
           hasTask() 
           ? <TaskList tasks={taskList} setTaskList={setTaskList} />
