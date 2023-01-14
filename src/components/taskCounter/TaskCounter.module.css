@@ -1,8 +1,7 @@
 .header {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-    margin-top: 64px;
+    gap: 18px;
+    margin: 20px 0;
 }
 
 .tasksCreated, .completedTasks {
@@ -16,30 +15,33 @@
 }
 
 .completedTasks {
-    color: var(--purple);
+    color: var(--iris-100);
 }
 
 .text {
     font-size: var(--sm);
-    font-weight: bold;
-    font-family: var(--inter);
+    font-weight: var(--bold);
+    font-family: var(--poppins);
+    color: var(--gray-200);
+    margin: 0;
 }
 
 .counterDefault {
-    background-color: var(--gray-300);
-    padding: 3px 8px;
+    background-color: var(--gray-200);
+    padding: 2px 7px;
     border-radius: 20px;
-    color: var(--gray-100);
+    color: var(--gray-600);
+    font-family: var(--poppins);
     font-size: var(--xsm);
     font-weight: bold;
-    font-family: var(--inter);
 }
 .counter {
-    background-color: var(--gray-500);
-    padding: 3px 8px;
+    background-color: var(--gray-200);
+    padding: 2px 7px;
     border-radius: 20px;
-    color: var(--gray-100);
+    color: var(--gray-600);
+
     font-size: var(--xsm);
     font-weight: bold;
-    font-family: var(--inter);
+    font-family: var(--poppins);
 }

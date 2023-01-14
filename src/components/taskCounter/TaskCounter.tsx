@@ -18,7 +18,7 @@ export function TaskCounter({ taskList }: TaskCounterComponent) {
                         id='tarefas-criadas'
                         className={styles.text}
                     >
-                        Tarefas criadas
+                       Todas
                     </p>
                     <span
                         aria-labelledby='tarefas-criadas' 

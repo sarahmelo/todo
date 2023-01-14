@@ -3,16 +3,15 @@
 }
 
 .main {
+  gap: 20px;
   max-width: 736px;
   margin: 0 auto;
-  padding: 40px;
-  height: 100%;
 }
-.darkBlock {
-  background-color: var(--gray-700);
-  height: 200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+.divider {
+  display: block;
+  min-height: 1px;
+  background-color: var(--gray-400);
+  width: auto;
+  margin: 20px 0;
+} 

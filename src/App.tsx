@@ -24,20 +24,17 @@ function App() {
   const hasTask = (): boolean => taskList.length !== 0;
 
   return (
-    <>
-      <div className='darkBlock'>
-        <Header/>
-      </div>
-      <div className='main'>
-        <Search onNewTask={handleNewTask}/>
-        <TaskCounter taskList={taskList} />
+    <div className='main'>
+      <Header></Header>
+      <Search onNewTask={handleNewTask}/>
+      <TaskCounter taskList={taskList} />
+      <span className='divider'></span>
         {
           hasTask() 
           ? <TaskList tasks={taskList} setTaskList={setTaskList} />
           : <EmptyList/>
         }
-      </div>
-    </>
+    </div>
   )
 }
 

@@ -1,26 +1,7 @@
-.headerPage {
-    margin: 0 auto;
-    margin-bottom: 53px;
-    display: flex;
-    width: fit-content;
-    align-items: center;
-    gap: 12px;
-}
-
-.title {
-    display: flex;
-}
-
-.to {
-    font-family: var(--inter);
-    font-weight: 900;
-    font-size: 40px;;
-    color: var(--blue) 
-}
-
-.do {
-    font-family: var(--inter);
-    font-weight: 900;
-    font-size: 40px;
-    color: var(--purple-dark);
+.logo {
+    color: var(--purple);
+    font-family: var(--montserrat);
+    font-weight: var(--bold);
+    font-size: 24px;
+    text-align: start;
 }

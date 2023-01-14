@@ -34,20 +34,18 @@ export function Search({onNewTask}: any) {
             <input 
                 type="text" 
                 id='search-input'
-                placeholder='Adicione uma nova tarefa'
+                placeholder='Estudar a tarde'
                 className={styles.input}    
                 onChange={(e) => setNewTaskTitle(e.target.value)}
                 value={newTextTitle}
                 onKeyDown={(e) => addNewTaskWithEnterKeyboard(e)}
             />
             
-
             <button 
                 className={styles.button}
                 onClick={() => addNewTask(newTextTitle)}    
             >
-                <span>Criar</span>
-                <FiPlusCircle className={styles.icon}/>
+                <span>Adicionar</span>
             </button>
         </div>
     )
